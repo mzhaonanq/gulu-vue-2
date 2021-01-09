@@ -49,7 +49,17 @@ export default {
   &.main {
     background: #409eff;
     border-color: #409eff;
-    color:#ffffff;
+    color: #ffffff;
+    &:focus, &:hover {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #fff;
+    }
+    &:active {
+      background:#3a8ee6;
+      border-color: #3a8ee6;
+      color: #fff;
+    }
   }
   &.danger {
     background: red;
