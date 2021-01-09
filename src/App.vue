@@ -14,8 +14,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+$color:red;
 .example {
-  color: red;
+  color: $color;
 }
 </style>
