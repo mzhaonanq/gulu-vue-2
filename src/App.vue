@@ -1,22 +1,21 @@
 <template>
-  <div class="example">
-    {{ msg }}
+  <div>
+  <Button>默认按钮</Button>
+  <Button button-type="main">主要按钮</Button>
   </div>
 </template>
 
 <script>
+import Button from "../lib/Button.vue";
+
 export default {
+  components: {Button},
   data() {
     return {
-      msg: 'Hello',
     };
   },
 };
 </script>
 
 <style lang="scss">
-$color:red;
-.example {
-  color: $color;
-}
 </style>
