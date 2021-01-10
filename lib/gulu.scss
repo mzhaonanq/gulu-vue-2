@@ -2,7 +2,6 @@
   //^=表示以gulu-开头，*=表示含有 gulu-
   box-sizing: border-box;
   margin: 0;padding: 0;
-  font-size: 16px;
   // 字体来源 https://github.com/zenozeng/fonts.css/
   font-family: -apple-system, "Noto Sans", "Helvetica Neue",
   Helvetica, "Nimbus Sans L", Arial,
@@ -13,7 +12,7 @@
 
 }
 
-[class^="gulu-icon"], [class*="gulu-icon"] {
+.gulu-icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;

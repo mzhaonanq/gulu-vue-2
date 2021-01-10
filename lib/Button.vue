@@ -1,11 +1,16 @@
 <template>
   <button :class="classes" class="gulu-button" :disabled="disabled">
+    <template v-if="iconName">
+    <Icon :name="iconName"/>
+    </template>
     <slot/>
   </button>
 </template>
 
 <script>
+import Icon from './Icon.vue'
 export default {
+  components:{Icon},
   data() {
     return {
       msg: "我是Button组件"
@@ -32,6 +37,9 @@ export default {
       validator(value){
         return value ===true || value===false
       }
+    },
+    iconName:{
+      type:String
     }
   },
   computed:{
