@@ -14,6 +14,7 @@
     "node-sass": "yarn:sass",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
+    "svg-sprite-loader": "^5.2.1",
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.12.1",
