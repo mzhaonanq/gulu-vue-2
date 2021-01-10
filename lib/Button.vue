@@ -73,6 +73,17 @@ export default {
     border-color: #3a8ee6;
     outline: none;
   }
+  &:disabled{
+    border-color: #ebeef5;
+    color: #c0c4cc;
+    cursor: not-allowed;
+    &:focus, &:hover {
+      color: #c0c4cc;
+      background-image: none;
+      background-color: #fff;
+      border-color: #ebeef5;
+    }
+  }
   &.main {
     background: #409eff;
     border-color: #409eff;
@@ -92,6 +103,16 @@ export default {
     &:active {
       background: #3a8ee6;
       border-color: #3a8ee6;
+    }
+    &:disabled{
+      background-color: #a0cfff;
+      border-color: #a0cfff;
+      &:focus, &:hover {
+        color: #ffffff;
+        background: #a0cfff;
+        border-color: #a0cfff;
+        cursor: not-allowed;
+      }
     }
   }
   &.danger {
@@ -113,6 +134,15 @@ export default {
     &:active {
       background: #dd6161;
       border-color: #dd6161;
+    }
+    &:disabled{
+      background-color: #fab6b6;
+      border-color: #fab6b6;
+      &:focus, &:hover {
+        color: #fff;
+        background-color: #fab6b6;
+        border-color: #fab6b6;
+      }
     }
   }
 }
