@@ -4,7 +4,8 @@
   </svg>
 </template>
 <script>
-import svg from './icons/down.svg'
+let importAll = (requireContext) => requireContext.keys().forEach(requireContext);
+try {importAll(require.context('./', true, /\.svg$/));} catch (error) {console.log(error);}
 export default {
   data(){
     return{}
