@@ -1,16 +1,18 @@
 <template>
   <div>
-    <Button disabled>默认按钮</Button>
-    <Button button-type="main" button-size="medium" disabled>主要中</Button>
-    <Button button-type="danger" button-size="small" disabled>危险小</Button>
+    <Button >默认按钮</Button>
+    <Button button-type="main" button-size="medium" >主要中</Button>
+    <Button button-type="danger" button-size="small" >危险小</Button>
+    <Icon/>
   </div>
 </template>
 
 <script>
 import Button from "../lib/Button.vue";
+import Icon from "../lib/Icon.vue";
 
 export default {
-  components: {Button},
+  components: {Icon, Button},
   data() {
     return {};
   }
