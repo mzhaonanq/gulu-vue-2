@@ -1,13 +1,13 @@
 <template>
-  <div>{{msg}}</div>
+  <svg class="gulu-icon" aria-hidden="true">
+    <use xlink:href="#down"></use>
+  </svg>
 </template>
 <script>
 export default {
   data(){
-    return{
-      msg:"Icon组件"
+    return{}
     }
-  }
 }
 </script>
 <style lang="scss" >
