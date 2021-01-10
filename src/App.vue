@@ -1,7 +1,8 @@
 <template>
   <div>
-  <Button>默认按钮</Button>
-  <Button button-type="main">主要按钮</Button>
+    <Button>默认按钮</Button>
+    <Button button-type="main">主要按钮</Button>
+    <Button button-type="danger">主要按钮</Button>
   </div>
 </template>
 
@@ -11,9 +12,8 @@ import Button from "../lib/Button.vue";
 export default {
   components: {Button},
   data() {
-    return {
-    };
-  },
+    return {};
+  }
 };
 </script>
 
