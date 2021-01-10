@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" class="gulu-button">
+  <button :class="classes" class="gulu-button" :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -24,6 +24,13 @@ export default {
       default: "big",
       validator(value) {
         return value === "big" || value === "medium" || value === "small";
+      }
+    },
+    disabled:{
+      type:Boolean,
+      default:false,
+      validator(value){
+        return value ===true || value===false
       }
     }
   },
