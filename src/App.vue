@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Button icon-name="down" icon-position="right">
+    <Button  icon-name="down" icon-position="right" @click="sayHi">
       <span>默认按钮</span>
     </Button>
-    <Button button-type="main" button-size="medium" icon-name="left" >
+    <Button button-size="medium" button-type="main" icon-name="left">
       <span>主要中</span>
     </Button>
-    <Button button-type="danger" button-size="small" >危险小</Button>
+    <Button button-size="small" button-type="danger">危险小</Button>
   </div>
 </template>
 
@@ -18,6 +18,11 @@ export default {
   components: {Icon, Button},
   data() {
     return {};
+  },
+  methods: {
+    sayHi() {
+      console.log("hi")
+    }
   }
 };
 </script>

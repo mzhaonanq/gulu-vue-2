@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :disabled="disabled" class="gulu-button">
+  <button :class="classes" :disabled="disabled" class="gulu-button" @click="$emit('click')">
     <template v-if="iconName && iconPosition==='left'">
       <Icon :name="iconName"/>
     </template>
