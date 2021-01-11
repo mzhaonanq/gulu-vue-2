@@ -1,16 +1,20 @@
 <template>
-  <button :class="classes" class="gulu-button" :disabled="disabled">
-    <template v-if="iconName">
-    <Icon :name="iconName"/>
+  <button :class="classes" :disabled="disabled" class="gulu-button">
+    <template v-if="iconName && iconPosition==='left'">
+      <Icon :name="iconName"/>
     </template>
     <slot/>
+    <template v-if="iconName && iconPosition==='right'">
+      <Icon :name="iconName"/>
+    </template>
   </button>
 </template>
 
 <script>
-import Icon from './Icon.vue'
+import Icon from "./Icon.vue"
+
 export default {
-  components:{Icon},
+  components: {Icon},
   data() {
     return {
       msg: "我是Button组件"
@@ -31,20 +35,24 @@ export default {
         return value === "big" || value === "medium" || value === "small";
       }
     },
-    disabled:{
-      type:Boolean,
-      default:false,
-      validator(value){
-        return value ===true || value===false
+    disabled: {
+      type: Boolean,
+      default: false,
+      validator(value) {
+        return value === true || value === false
       }
     },
-    iconName:{
-      type:String
+    iconName: {
+      type: String
+    },
+    iconPosition: {
+      type: String,
+      default: "left"
     }
   },
-  computed:{
-    classes(){
-      return [this.buttonType,this.buttonSize]
+  computed: {
+    classes() {
+      return [this.buttonType, this.buttonSize]
     }
   }
 }
@@ -52,7 +60,6 @@ export default {
 
 <style lang="scss">
 .gulu-button {
-  display: inline-block;
   background: #ffffff;
   border: 1px solid #dcdfe6;
   border-radius: 4px;
@@ -62,11 +69,12 @@ export default {
   text-align: center;
   color: #606266;
   cursor: pointer;
-  &.medium{
+  display: inline-block;
+  &.medium {
     font-size: 12px;
     padding: 10px 14px;
   }
-  &.small{
+  &.small {
     font-size: 10px;
     padding: 8px 12px;
   }
@@ -81,7 +89,7 @@ export default {
     border-color: #3a8ee6;
     outline: none;
   }
-  &:disabled{
+  &:disabled {
     border-color: #ebeef5;
     color: #c0c4cc;
     cursor: not-allowed;
@@ -96,11 +104,11 @@ export default {
     background: #409eff;
     border-color: #409eff;
     color: #ffffff;
-    &.medium{
+    &.medium {
       font-size: 12px;
       padding: 10px 14px;
     }
-    &.small{
+    &.small {
       font-size: 10px;
       padding: 8px 12px;
     }
@@ -112,7 +120,7 @@ export default {
       background: #3a8ee6;
       border-color: #3a8ee6;
     }
-    &:disabled{
+    &:disabled {
       background-color: #a0cfff;
       border-color: #a0cfff;
       &:focus, &:hover {
@@ -127,11 +135,11 @@ export default {
     color: #fff;
     background-color: #f56c6c;
     border-color: #f56c6c;
-    &.medium{
+    &.medium {
       font-size: 12px;
       padding: 10px 14px;
     }
-    &.small{
+    &.small {
       font-size: 10px;
       padding: 8px 12px;
     }
@@ -143,7 +151,7 @@ export default {
       background: #dd6161;
       border-color: #dd6161;
     }
-    &:disabled{
+    &:disabled {
       background-color: #fab6b6;
       border-color: #fab6b6;
       &:focus, &:hover {

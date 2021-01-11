@@ -1,16 +1,12 @@
 <template>
   <div>
-    <Button icon-name="down">
+    <Button icon-name="down" icon-position="right">
       <span>默认按钮</span>
     </Button>
-    <Button button-type="main" button-size="medium" >
+    <Button button-type="main" button-size="medium" icon-name="left" >
       <span>主要中</span>
-      <Icon name="left"/>
     </Button>
     <Button button-type="danger" button-size="small" >危险小</Button>
-
-    <Icon name="left"/>
-
   </div>
 </template>
 
