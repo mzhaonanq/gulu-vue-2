@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Button  icon-name="down" icon-position="right" @click="sayHi">
+    <Button  icon-name="down" icon-position="right" @click="sayHi" >
       <span>默认按钮</span>
     </Button>
     <Button button-size="medium" button-type="main" icon-name="left">

@@ -1,12 +1,12 @@
 {
-  "name": "webpack-vue-test",
-  "version": "0.0.1",
-  "main": "index.js",
+  "name": "mzhaonanq-gulu",
+  "version": "0.0.2",
+  "main": "./dist/gulu.js",
   "author": "mzhaonanq <1002604003@qq.com>",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && webpack --config webpack.config.prod.js",
-    "dev": "webpack serve"
+    "dev": "webpack serve --config webpack.config.dev.js"
   },
   "devDependencies": {
     "css-loader": "^5.0.1",

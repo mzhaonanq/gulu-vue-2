@@ -1,29 +1,13 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const {VueLoaderPlugin} = require("vue-loader")
-module.exports = {
+const base =require('./webpack.config')
+const path =require('path')
+module.exports = Object.assign({},base,{
   mode: "production",
   entry: "./lib/output.js",
+  externals:["node_modules"],
   output: {
-    filename: "gulu.js"
+    path:path.resolve(__dirname,"dist"),
+    filename: "gulu.js",
+    library:"gulu",
+    libraryTarget:"umd"
   },
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: "vue-loader"
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test:/\.scss$/i,
-        use:["style-loader","css-loader","sass-loader"]
-      }
-    ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({template: "./index.html", title: "gulu-vue"}),
-    new VueLoaderPlugin()
-  ]
-};
+})
